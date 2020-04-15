@@ -13,7 +13,4 @@
 # [START app_yaml]
 env: flex
 runtime: nodejs
-
-health_check:
-  enable_health_check: False
 # [END app_yaml]
