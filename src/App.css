@@ -1,38 +1,72 @@
+
+html {
+  background-image: linear-gradient(#041f30, #041f10);
+}
+
 .App {
+
+}
+
+.Task {
+  position: absolute;
+  background-color: #f5c842;
+  padding: 10px;
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  animation-duration: 0.2s;
+  animation-name: fadeIn;
   text-align: center;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes slidein {
   from {
-    transform: rotate(0deg);
+    left: 80px;
   }
   to {
-    transform: rotate(360deg);
+    left: 120px;
   }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.newFormPopup {
+  position: absolute;
+  background-color: #567a8f;
+  border-radius: 10px;
+  left: 120px;
+  opacity: 1;
+  animation-duration: 0.2s;
+  animation-name: slidein, fadeIn;
+  top: 10px;
+  padding: 20px;
+}
+
+.newFormPopup label, button, input {
+  margin: 10px;
+}
+
+.newFormPopup button {
+  padding: 4px;
+}
+
+.newFormPopup label {
+  color: white;
 }
